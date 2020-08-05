@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import Markdown from './components/Markdown';
+import MarkdownExample from './components/MarkdownExample';
 import SearchableDropdown from './components/SearchableDropdown';
 import Card from './components/Card';
 import logo from './images/DevScissors Graphics.jpg';
+
+
 
 function App() {
   return (
@@ -11,11 +13,11 @@ function App() {
       {/* <SearchableDropdown /> */}
       {/* <Card /> */}
       {/* <img src={logo} alt="DevScissors logo" /> */}
-      {/* <MarkdownSample /> */}
+      <MarkdownExample />
       {/* <MarkdownSample source={exampleOne} renderers={{code: CodeRenderer}} /> */}
-      <Markdown />
-     
-      
+
+
+
     </div>
   );
 }
