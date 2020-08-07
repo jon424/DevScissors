@@ -1,8 +1,10 @@
 import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 
+//'text' value is where it's at...
+
 const countryOptions = [
-  { key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' },
+  {  text: 'Afghanistan' },
   { key: 'ax', value: 'ax', flag: 'ax', text: 'Aland Islands' },
   { key: 'al', value: 'al', flag: 'al', text: 'Albania' },
   { key: 'dz', value: 'dz', flag: 'dz', text: 'Algeria' },
@@ -24,12 +26,12 @@ const countryOptions = [
   { key: 'by', value: 'by', flag: 'by', text: 'Belarus' },
   { key: 'be', value: 'be', flag: 'be', text: 'Belgium' },
   { key: 'bz', value: 'bz', flag: 'bz', text: 'Belize' },
-  { key: 'bj', value: 'bj', flag: 'bj', text: 'Benin' },
+  {text: 'Benin' },
 ]
 
 const SearchableDropdown = () => (
   <Dropdown
-    placeholder='Select Country'
+    placeholder='Search Snippets'
     fluid
     search
     selection
