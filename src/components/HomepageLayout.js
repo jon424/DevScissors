@@ -4,6 +4,7 @@
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
+import './styles.css'
 import React, { Component } from 'react'
 import {
   Button,
