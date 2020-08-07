@@ -5,6 +5,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
 import './styles.css'
+import logo from '../images/DevScissors Graphics.jpg';
 import React, { Component } from 'react'
 import {
   Button,
@@ -278,7 +279,7 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image src={logo} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

@@ -17,7 +17,7 @@
 }
 
 div[role=option]:hover{
-    background-color: blue !important;
+    background-color: #dcdcdc!important;
 }
 
 
