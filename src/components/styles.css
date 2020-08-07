@@ -20,6 +20,16 @@ div[role=option]:hover{
     background-color: #dcdcdc!important;
 }
 
+.ui.inverted.button:hover {
+    background-color: whitesmoke!important;
+}
+
+.ui.secondary.inverted.pointing.menu .item:hover {
+    color: whitesmoke!important;
+    
+}
+
+
 
 
     

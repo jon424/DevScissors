@@ -1,6 +1,8 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
 
+//I'm thinking could have e-mail contact link, buy me a coffee link lol 
+
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
@@ -38,7 +40,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company✂'
+      content='DevSc✂ssors'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
