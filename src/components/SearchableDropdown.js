@@ -17,10 +17,10 @@ const countryOptions = [
   { key: 'am', value: 'am', flag: 'am', text: 'Armenia' },
   { key: 'aw', value: 'aw', flag: 'aw', text: 'Aruba' },
   { key: 'au', value: 'au', flag: 'au', text: 'Australia' },
-  { key: 'at', value: 'at', flag: 'at', text: 'Austria' },
-  { key: 'az', value: 'az', flag: 'az', text: 'Azerbaijan' },
-  { key: 'bs', value: 'bs', flag: 'bs', text: 'Bahamas' },
-  { key: 'bh', value: 'bh', flag: 'bh', text: 'Bahrain' },
+  { key: 'at', value: 'at', flag: 'at', text: 'This could be a topic' },
+  { key: 'az', value: 'az', flag: 'az', text: 'React' },
+  { key: 'bs', value: 'bs', flag: 'bs', text: 'Toggling Colors in jQuery' },
+  { key: 'bh', value: 'bh', flag: 'bh', text: 'Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum Lorem Ipsum Something Issum' },
   { key: 'bd', value: 'bd', flag: 'bd', text: 'Bangladesh' },
   { key: 'bb', value: 'bb', flag: 'bb', text: 'Barbados' },
   { key: 'by', value: 'by', flag: 'by', text: 'Belarus' },
@@ -36,6 +36,8 @@ const SearchableDropdown = () => (
     search
     selection
     options={countryOptions}
+    style={{backgroundColor: 'gainsboro',
+  border: '1px solid black'}}
   />
 )
 

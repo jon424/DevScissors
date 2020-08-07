@@ -59,37 +59,44 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Button primary size='huge' style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'firebrick'}}>
+        backgroundColor: 'firebrick',
+        boxShadow: '3px 5px #080808',
+        }}>
       HTML/CSS
       <Icon name='right arrow' />
     </Button>
     <Button primary size='huge' style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'rebeccapurple'}}>
+        backgroundColor: 'rebeccapurple',
+        boxShadow: '3px 5px #080808'}}>
       JavaScript
       <Icon name='right arrow' />
     </Button>
     <Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'green'}}>
+        backgroundColor: 'green',
+        boxShadow: '3px 5px #080808'}}>
       React
       <Icon name='right arrow' />
     </Button>
     <Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'grey'}}>
+        backgroundColor: 'grey',
+        boxShadow: '3px 5px #080808'}}>
       Node.js
       <Icon name='right arrow' />
     </Button>
     <Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'orange'}}>
+        backgroundColor: 'orange',
+        boxShadow: '3px 5px #080808'}}>
       jQuery
       <Icon name='right arrow' />
     </Button>
     <Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
-        backgroundColor: 'firebrick'}}>
+        backgroundColor: 'firebrick',
+        boxShadow: '3px 5px #080808'}}>
       PostgreSQL
       <Icon name='right arrow' />
     </Button>
