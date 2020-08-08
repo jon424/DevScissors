@@ -46,18 +46,51 @@ max-width: none!important;
     justify-content: space-between;
     /* align-content: space-around; */
     /* width: 100%; */
+    margin-top: 54px;
 }
 
 .ui.card, .ui.cards>.card{
     /* margin: 30px 55px 30px 0px!important; */
     margin: 16px 0px 49px 0px!important;
-    width: 335px!important;
-   
-  
-   
+    width: 335px;  
 }
 
+/* .ui.inverted.segment,  */
+/* .ui.primary.inverted.segment{ 
+    background: whitesmoke!important;
+} */
 
 
+/*need these based on path...*/
+/* .ui.inverted.segment{ 
+    background: whitesmoke;
+} */
+
+/* .ui.secondary.inverted.menu{
+    background-color: black!important;
+} */
+
+.ui.large.inverted.pointing.secondary menu{
+    background-color:#1b1c1d!important;
+    position:fixed;
+}
+.ui.inverted.vertical.center.aligned.segment{
+    background-color:#1b1c1d!important;
+} 
+
+
+div[role=navbar]{
+    border: 2px solid red;
+}
+/*
+
+div[role=combobox]{
+    background-color: tomato!important;
+}
+
+.ui.vertical.segment{
+
+    background-color: darkgreen!important;
+} */
 
     
