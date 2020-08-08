@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-
 import { Route, Link } from 'react-router-dom';
 import CardExampleCard from './CardExampleCard';
-
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
@@ -25,10 +23,12 @@ const { MediaContextProvider, Media } = createMedia({
     },
 })
 
-//Place Individual Posts in here~~~~~~~~>
+//Place Individual Posts in here... <SearchableDropdown /> can have prop on it to display 
+//"search "VARIABLE" snippets" React, etc...
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
 const HomepageHeading = ({ mobile }) => (
     <Container text>
-         <h1 style={{
+        <h1 style={{
             marginTop: '20px'
         }}>React</h1>
         {/* <h3>This is the React snippets collection.</h3> */}
@@ -38,7 +38,8 @@ const HomepageHeading = ({ mobile }) => (
             margin: 'auto',
             fontSize: '12pt'
         }}>This is a paragraph about the React Snippets Collection. It is quite a paragraph, and it is quite a collection.</p>
-        <div className="metaPost">     
+        <SearchableDropdown />
+        <div className="metaPost">
             <CardExampleCard />
             <CardExampleCard />
             <CardExampleCard />
@@ -61,7 +62,7 @@ class DesktopContainer extends Component {
 
     render() {
         const { children } = this.props
-       
+
         return (
             <Media greaterThan='mobile'>
                 <Visibility
