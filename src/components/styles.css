@@ -47,7 +47,7 @@ max-width: none!important;
     /* align-content: space-around; */
     /* width: 100%; */
     margin-top: 54px;
-    z-index: 1;
+
 }
 
 .ui.card, .ui.cards>.card{
@@ -72,14 +72,24 @@ div[role=navbar]{
 
 
 @media only screen and (max-width: 769px){ 
+    
+    .ui.inverted.vertical.center.aligned.segment{
+        background-color:#1b1c1d;
+      
+    } 
+    /* .fresnel-container .fresnel-greaterThan-mobile {
+        z-index: ;
+    } */
     .pushable{
-        position: fixed;
+      
         width: 100%;
-     
+        z-index: 60;
+        /* height: 241px; */
     }
 
 .pushable>.pusher{
-    margin-bottom: -266px;
+    /* margin-bottom: -266px; */
+    /* z-index: -2; */
 
   }
   .pusher.dimmed{
@@ -89,7 +99,7 @@ div[role=navbar]{
   .metaPost{
       margin-top: 111px!important;
       margin-left: 20%;
-      z-index: -20!important;
+      /* z-index: -20!important; */
   }
 .ui.card, .ui.cards>.card{
   

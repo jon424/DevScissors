@@ -15,8 +15,8 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path='/' component={HomepageLayout}/>
-          <Route exact path='/post/:id' component={Post}/>
+         <Route exact path='/' component={HomepageLayout}/> 
+         <Route exact path='/post/:id' component={Post}/>
      
      {/* NOT FOUND HANDLER */}
      {/* <Route component={NotFound} /> */}
