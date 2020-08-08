@@ -28,7 +28,17 @@ const { MediaContextProvider, Media } = createMedia({
 //Place Individual Posts in here~~~~~~~~>
 const HomepageHeading = ({ mobile }) => (
     <Container text>
-        <div className="metaPost">
+         <h1 style={{
+            marginTop: '20px'
+        }}>React</h1>
+        {/* <h3>This is the React snippets collection.</h3> */}
+        <p className="postDescription" style={{
+            // textAlign: 'justify',
+            display: 'block',
+            margin: 'auto',
+            fontSize: '12pt'
+        }}>This is a paragraph about the React Snippets Collection. It is quite a paragraph, and it is quite a collection.</p>
+        <div className="metaPost">     
             <CardExampleCard />
             <CardExampleCard />
             <CardExampleCard />

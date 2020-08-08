@@ -7,7 +7,6 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
 import './styles.css'
-import logo from '../images/DevScissors Graphics.jpg';
 import React, { Component } from 'react'
 import {
     Button,
@@ -29,10 +28,7 @@ const { MediaContextProvider, Media } = createMedia({
 
 const HomepageHeading = ({ mobile }) => (
     <Container text>
-
-
-
-
+        <h1>DevSc✂ssors</h1>
     </Container>
 )
 
@@ -151,7 +147,12 @@ class MobileContainer extends Component {
                         <Segment
                             inverted
                             textAlign='center'
-                            style={{ minHeight: this.state.height, padding: '1em 0em' }}
+                            style={{ minHeight: this.state.height, padding: '1em 0em',
+                            // position: 'fixed',
+                            // zIndex: '1000',
+                            // backgroundColor: 'black'
+                         }}
+                            
                             vertical
                         >
                             <Container>
@@ -200,4 +201,4 @@ const NavBar = () => (
     </ResponsiveContainer>
 )
 
-export default NavBar
+export default NavBar;
