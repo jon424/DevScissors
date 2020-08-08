@@ -15,12 +15,12 @@ const CardExampleCard = () => (
                     Jest snippets for front-end testing.
       </Card.Description>
             </Card.Content>
-            {/* <Card.Content extra>
+          <Card.Content extra>
       <a>
         <Icon name='user' />
-        22 Friends
+        22 Snippets
       </a>
-    </Card.Content> */}
+    </Card.Content> 
         </Card>
     </Link>
 )
