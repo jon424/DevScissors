@@ -129,6 +129,8 @@ class DesktopContainer extends Component {
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
+
+            
           
             <HomepageHeading />
           </Segment>
@@ -157,8 +159,24 @@ class MobileContainer extends Component {
 
     return (
       <Media as={Sidebar.Pushable} at='mobile'>
-     
-      </Media>
+      <Sidebar.Pushable>
+       
+
+        <Sidebar.Pusher dimmed={sidebarOpened}>
+          <Segment
+            inverted
+            textAlign='center'
+            style={{ minHeight: 350, padding: '1em 0em' }}
+            vertical
+          >
+           
+            <HomepageHeading mobile />
+          </Segment>
+
+          {children}
+        </Sidebar.Pusher>
+      </Sidebar.Pushable>
+    </Media>
     )
   }
 }
