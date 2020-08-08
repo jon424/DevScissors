@@ -55,42 +55,18 @@ max-width: none!important;
     width: 335px;  
 }
 
-/* .ui.inverted.segment,  */
-/* .ui.primary.inverted.segment{ 
-    background: whitesmoke!important;
-} */
-
-
-/*need these based on path...*/
-/* .ui.inverted.segment{ 
-    background: whitesmoke;
-} */
-
-/* .ui.secondary.inverted.menu{
-    background-color: black!important;
-} */
 
 .ui.large.inverted.pointing.secondary menu{
-    background-color:#1b1c1d!important;
+    background-color:#1b1c1d;
     position:fixed;
 }
 .ui.inverted.vertical.center.aligned.segment{
-    background-color:#1b1c1d!important;
+    background-color:#1b1c1d;
 } 
 
 
 div[role=navbar]{
     border: 2px solid red;
 }
-/*
-
-div[role=combobox]{
-    background-color: tomato!important;
-}
-
-.ui.vertical.segment{
-
-    background-color: darkgreen!important;
-} */
 
     

@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import MarkdownExample from './components/MarkdownExample';
 import SearchableDropdown from './components/SearchableDropdown';
 import HomepageLayout from './components/HomepageLayout';
 import NavBar from './components/NavBar';
