@@ -48,6 +48,8 @@ const HomepageHeading = ({ mobile }) => (
             <CardExampleCard />
             <CardExampleCard />
             <CardExampleCard />
+            <CardExampleCard />
+            <CardExampleCard />
         </div>
 
         <Header
