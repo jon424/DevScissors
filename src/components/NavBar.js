@@ -118,10 +118,7 @@ class MobileContainer extends Component {
     })
 
     render() {
-        const { children } = this.props
         const { sidebarOpened } = this.state
-
-        const { fixed } = this.state
 
         return (
             <Media as={Sidebar.Pushable} at='mobile'>
@@ -135,7 +132,7 @@ class MobileContainer extends Component {
                         visible={sidebarOpened}
                         direction='top'
 
-                      
+
                     >
                         <Menu.Item as='a' active role='navbar'>
                             Home
@@ -152,17 +149,10 @@ class MobileContainer extends Component {
                             inverted
                             fixed
                             textAlign='center'
-                            style={{ minHeight: this.state.height, padding: '1em 0em',
-                            // position: 'fixed',
-                            // top: '0',
-                            // left: '0',
-                            // zIndex: '1000',
-                            // backgroundColor: 'black'
-                            border: '1px solid red',
-                           
-                         
-                            
-                         }}
+                            style={{
+                                minHeight: this.state.height,
+                                padding: '1em 0em'
+                            }}
                             vertical
                         >
                             <Container>

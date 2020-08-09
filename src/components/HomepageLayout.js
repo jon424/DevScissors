@@ -18,7 +18,6 @@ import {
   Icon,
   Image,
   List,
-  Menu,
   Segment,
   Sidebar,
   Visibility,

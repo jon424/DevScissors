@@ -31,7 +31,6 @@ const HomepageHeading = ({ mobile }) => (
         <h1 style={{
             marginTop: '155px',
         }}>React</h1>
-        {/* <h3>This is the React snippets collection.</h3> */}
         <p className="postDescription" style={{
             // textAlign: 'justify',
             display: 'block',
@@ -76,7 +75,6 @@ class MobileContainer extends Component {
     state = {}
 
     handleSidebarHide = () => this.setState({ sidebarOpened: false })
-
     handleToggle = () => this.setState({ sidebarOpened: true })
 
     render() {
