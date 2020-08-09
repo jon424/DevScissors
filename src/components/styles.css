@@ -59,7 +59,7 @@ max-width: none!important;
 
 .ui.large.inverted.pointing.secondary menu{
     background-color:#1b1c1d;
-    position:fixed;
+    /* position:fixed; */
 }
 .ui.inverted.vertical.center.aligned.segment{
     background-color:#1b1c1d;
@@ -83,7 +83,7 @@ div[role=navbar]{
     .pushable{
       
         width: 100%;
-        z-index: 60;
+        /* z-index: 60; */
         /* height: 241px; */
     }
 
@@ -111,4 +111,37 @@ div[role=navbar]{
   }
   
 }
+
+/* Page Context */
+.pushable:not(body) {
+    transform: none;
+  }
+  
+  .pushable:not(body) > .ui.sidebar,
+  /* .pusher:not(body) > .ui.inverted.vertical.center.aligned.segment, */
+  .pushable:not(body) > .fixed,
+  .pushable:not(body) > .pusher:after {
+    position: fixed;
+    width: 100%;
+  }
+
+ .ui.inverted.vertical.center.aligned.segment{
+    position: fixed !important;
+    left: 0px !important;
+    top: 0px !important;
+    /* height: 100vh !important; */
+    width: 100%;
+    z-index: 1000!important;  
+ }
+/* .pushable > body {
+    position: fixed;
+    margin-top: 2px;
+} */
+
+/* .pusher body{
+    position: fixed;
+} */
+  
+
+
     

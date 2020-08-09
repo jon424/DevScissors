@@ -147,9 +147,10 @@ class MobileContainer extends Component {
                         <Menu.Item as='a'>Sign Up</Menu.Item>
                     </Sidebar>
 
-                    <Sidebar.Pusher dimmed={sidebarOpened}>
+                    <Sidebar.Pusher dimmed={sidebarOpened} >
                         <Segment
                             inverted
+                            fixed
                             textAlign='center'
                             style={{ minHeight: this.state.height, padding: '1em 0em',
                             // position: 'fixed',
@@ -157,6 +158,10 @@ class MobileContainer extends Component {
                             // left: '0',
                             // zIndex: '1000',
                             // backgroundColor: 'black'
+                            border: '1px solid red',
+                           
+                         
+                            
                          }}
                             vertical
                         >

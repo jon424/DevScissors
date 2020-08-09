@@ -29,7 +29,7 @@ const { MediaContextProvider, Media } = createMedia({
 const HomepageHeading = ({ mobile }) => (
     <Container text>
         <h1 style={{
-            marginTop: '20px'
+            marginTop: '155px',
         }}>React</h1>
         {/* <h3>This is the React snippets collection.</h3> */}
         <p className="postDescription" style={{
@@ -61,19 +61,8 @@ class DesktopContainer extends Component {
     showFixedMenu = () => this.setState({ fixed: true })
 
     render() {
-        const { children } = this.props
-
         return (
-            <Media greaterThan='mobile'>
-                <Visibility
-                    once={false}
-                    onBottomPassed={this.showFixedMenu}
-                    onBottomPassedReverse={this.hideFixedMenu}
-                >
-
-                </Visibility>
-                {children}
-            </Media>
+            <div></div>
         )
     }
 }
@@ -92,15 +81,12 @@ class MobileContainer extends Component {
 
     render() {
         const { children } = this.props
-        const { sidebarOpened } = this.state
 
         return (
-            <Sidebar.Pushable>
-                <Sidebar.Pusher dimmed={sidebarOpened}>
-                    <HomepageHeading mobile />
-                    {children}
-                </Sidebar.Pusher>
-            </Sidebar.Pushable>
+            <div>
+                <HomepageHeading mobile />
+                {children}
+            </div>
         )
     }
 }
