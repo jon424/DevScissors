@@ -100,38 +100,22 @@ max-width: none!important;
 
 
   /*need to change this to all "none" values for homepage...*/
- .ui.inverted.vertical.center.aligned.segment.other-page{
+ /* .ui.inverted.vertical.center.aligned.segment{
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
     z-index: 1000;  
- }
-
- .ui.inverted.vertical.center.aligned.segment.home-page{
-    position: unset;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
- }
-/* 
- .landing-page .ui.inverted.vertical.center.aligned.segment{
-    position: none;
-    left: none;
-    top: none;
-    width: none;
-    z-index: none;  
- }  */
+ } */
 
  /*homepage values:*/
- /* .ui.inverted.vertical.center.aligned.segment{
-    position: none;
-    left: none;
-    top: none;
-    width: none;
-    z-index: none;  
- } */
+  .ui.inverted.vertical.center.aligned.segment .home-page{
+    position: none!important;
+    left: none!important;
+    top: none!important;
+    width: none!important;
+    z-index: none!important;
+ }
 
 
   

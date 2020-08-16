@@ -23,6 +23,14 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
+
+// componentWillMount(){
+//   const domain = '/';
+//   if (window.location.href.indexOf('/') > 0) require('./homestyles.css')
+//   else require ('./styles.css')
+// }
+
+
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
     mobile: 0,
@@ -32,12 +40,18 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+
+  <Container text >
     <Header
       as='h1'
       content='DevSc✂ssors'
       inverted
       style={{
+        // position: 'relative !important',
+        // left: 'none !important',
+        // top: 'none !important',
+        // width: 'none !important',
+        // zIndex: '0 !important',
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
         marginBottom: 0,
