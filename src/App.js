@@ -8,8 +8,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import logo from './images/DevScissors Graphics.jpg';
 import $ from 'jquery';
 
-//look at example in here codepen example for using jQuery https://medium.com/@kingrayhan/how-do-i-use-jquery-in-react-app-976c124f5448
-
 class App extends Component {
 
   componentDidMount(){
@@ -39,7 +37,6 @@ componentDidUpdate(){
   }
 }
 
-
   render(){
   return (
     <div className="App">
@@ -54,7 +51,7 @@ componentDidUpdate(){
       </Router>
     </div>
   );
-}
+ }
 }
 
 export default App;
