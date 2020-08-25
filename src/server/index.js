@@ -1,69 +1,97 @@
-//https://developer.okta.com/blog/2018/10/11/build-simple-web-app-with-express-react-graphql
-
 const express = require('express');
-const cors = require('cors');
-const graphqlHTTP = require('express-graphql');
-const gql = require('graphql-tag');
-const { buildASTSchema } = require('graphql');
-
-const POSTS = [
-  { author: "John Doe", body: "Hello world" },
-  { author: "Jane Doe", body: "Hi, planet!" },
-];
-
-const schema = buildASTSchema(gql`
-  type Query {
-    posts: [Post]
-    post(id: ID!): Post
-  }
-
-  type Post {
-    id: ID
-    author: String
-    body: String
-  }
-
-  type Mutation {
-      submitPost(input: PostInput!): Post
-  }
-
-  input PostInput {
-      id: ID
-      author: String!
-      body: String!
-  }
-`);
-
-const mapPost = (post, id) => post && ({ id, ...post });
-
-const root = {
-  posts: () => POSTS.map(mapPost),
-  post: ({ id }) => mapPost(POSTS[id], id),
-  submitPost: ({ input: { id, author, body } }) => {
-    const post = { author, body };
-    let index = POSTS.length;
-  
-    if (id != null && id >= 0 && id < POSTS.length) {
-      if (POSTS[id].authorId !== authorId) return null;
-  
-      POSTS.splice(id, 1, post);
-      index = id;
-    } else {
-      POSTS.push(post);
-    }
-  
-    return mapPost(post, index);
-  },
-};
-
 const app = express();
-app.use(cors());
-app.use('/graphql', graphqlHTTP({
-  schema,
-  rootValue: root,
-  graphiql: true,
-}));
+const cors = require('cors');
+const pool = require('./db');
+const path = require("path");
 
-const port = process.env.PORT || 4000
-app.listen(port);
-console.log(`Running a GraphQL API server at localhost:${port}/graphql`);
+const PORT = process.env.PORT || 5000;
+
+//process.env.PORT
+//process.env.NODE_ENV => production or undefined
+
+//middleware
+app.use(cors());
+app.use(express.json());
+
+//disables caching, trying to clear the 304 response:
+//app.disable('etag');
+
+//app.use(express.static(path.join(__dirname, "client/build")));
+//app.use(express.static("client/build"))
+
+
+if(process.env.NODE_ENV === "production") {
+  //server static content//
+  //did npm run build in client
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
+
+console.log('dirname', __dirname);
+console.log(path.join(__dirname, "client/build"));
+
+//routes
+
+//get all episodes
+app.get('/api/episode', async (req, res) => {
+  try {
+    const allEpisodes = await pool.query("SELECT * FROM card ORDER BY id DESC");
+    res.json(allEpisodes.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+
+//select one episode
+app.get('/api/episode/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const episodeContent = await pool.query(
+      "SELECT * FROM card WHERE id = $1", [
+      id
+    ]);
+
+    res.json(episodeContent.rows[0])
+  } catch (err) {
+    console.error(err.message)
+  }
+});
+
+app.get('/api/episode/:id/playlist', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const episodeContent = await pool.query(
+      "SELECT * FROM playlist WHERE episode = $1", [
+      id
+    ]);
+
+    res.json(episodeContent.rows)
+  } catch (err) {
+    console.error(err.message)
+  }
+});
+
+app.post("/send", async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    const newMessage = await pool.query(
+      "INSERT INTO messages (name, email, message) VALUES ($1, $2, $3) RETURNING *", [
+        name,
+        email,
+        message
+      ]
+    );
+    res.json(newMessage.rows[0]);
+  } catch (err) {
+    console.error(err.message)
+  }
+});
+
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`server has started on http://localhost:${PORT}`);
+});
