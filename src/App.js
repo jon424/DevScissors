@@ -4,10 +4,12 @@ import SearchableDropdown from './components/SearchableDropdown';
 import HomepageLayout from './components/HomepageLayout';
 import NavBar from './components/NavBar';
 import Post from './components/Post'
-import PostViewer from './PostViewer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //import logo from './images/DevScissors Graphics.jpg';
 import $ from 'jquery';
+
+//custom domain name:
+//https://medium.com/better-programming/deploying-your-react-app-with-a-custom-domain-in-minutes-5c58f3675784
 
 class App extends Component {
 
@@ -46,16 +48,17 @@ componentDidUpdate(){
         <Switch>
          <Route exact path='/' component={HomepageLayout} />  
          <Route exact path='/post/:id' component={Post} />
-         <Route exact path='/dog' component={PostViewer} />
+
      {/* NOT FOUND HANDLER */}
      {/* <Route component={NotFound} /> */}
         </Switch>
-        <PostViewer />
+        
       </Router>
     </div>
   );
  }
 }
+
 
 export default App;
 
