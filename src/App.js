@@ -36,7 +36,8 @@ componentDidUpdate(){
     $(".ui.inverted.vertical.center.aligned.segment").addClass("other-page");
   }
 }
-
+//change the "post" portion of /post/:id to be a route to a particular Big Topic (React, JavaScript, HTML, etc...)
+//test comment
   render(){
   return (
     <div className="App">
@@ -44,7 +45,7 @@ componentDidUpdate(){
         <NavBar />
         <Switch>
          <Route exact path='/' component={HomepageLayout} />  
-         <Route exact path='/post/:id' component={Post} />
+         <Route exact path='/post/:id' component={Post} /> 
          
      {/* NOT FOUND HANDLER */}
      {/* <Route component={NotFound} /> */}
