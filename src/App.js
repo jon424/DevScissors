@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchableDropdown from './components/SearchableDropdown';
 import HomepageLayout from './components/HomepageLayout';
 import NavBar from './components/NavBar';
-import Post from './components/Post'
+import Topic from './components/Topic'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //import logo from './images/DevScissors Graphics.jpg';
 import $ from 'jquery';
@@ -36,7 +35,7 @@ componentDidUpdate(){
     $(".ui.inverted.vertical.center.aligned.segment").addClass("other-page");
   }
 }
-//change the "post" portion of /post/:id to be a route to a particular Big Topic (React, JavaScript, HTML, etc...)
+//change the "topic" portion of /topic/:id to be a route to a particular Big Topic (React, JavaScript, HTML, etc...)
 //test comment
   render(){
   return (
@@ -45,7 +44,7 @@ componentDidUpdate(){
         <NavBar />
         <Switch>
          <Route exact path='/' component={HomepageLayout} />  
-         <Route exact path='/post/:id' component={Post} /> 
+         <Route exact path='/topic/:id' component={Topic} /> 
          
      {/* NOT FOUND HANDLER */}
      {/* <Route component={NotFound} /> */}
