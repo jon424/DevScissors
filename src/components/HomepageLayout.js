@@ -8,7 +8,10 @@ import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
 import './styles.css'
 import logo from '../images/DevScissors Graphics.jpg';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Post from './Post'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Topic from './Topic';
 import {
   Button,
   Container,
@@ -69,49 +72,50 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge' style={{
+ 
+    <Link to='/html-css'><Button primary size='huge' style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'firebrick',
         boxShadow: '3px 5px #080808',
         }}>
       HTML/CSS
       <Icon name='right arrow' />
-    </Button>
-    <Button primary size='huge' style={{
+    </Button></Link>
+    <Link to='/javascript'><Button primary size='huge' style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'rebeccapurple',
         boxShadow: '3px 5px #080808'}}>
       JavaScript
       <Icon name='right arrow' />
-    </Button>
-    <Button primary size='huge'style={{
+    </Button></Link>
+    <Link to='/react'><Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'green',
         boxShadow: '3px 5px #080808'}}>
       React
       <Icon name='right arrow' />
-    </Button>
-    <Button primary size='huge'style={{
+    </Button></Link>
+    <Link to='/node'><Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'grey',
         boxShadow: '3px 5px #080808'}}>
       Node.js
       <Icon name='right arrow' />
-    </Button>
-    <Button primary size='huge'style={{
+    </Button></Link>
+    <Link to='/jquery'><Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'orange',
         boxShadow: '3px 5px #080808'}}>
       jQuery
       <Icon name='right arrow' />
-    </Button>
-    <Button primary size='huge'style={{
+    </Button></Link>
+    <Link to='/postgresql'><Button primary size='huge'style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'firebrick',
         boxShadow: '3px 5px #080808'}}>
       PostgreSQL
       <Icon name='right arrow' />
-    </Button>
+    </Button></Link>
   </Container>
 )
 
@@ -142,9 +146,6 @@ class DesktopContainer extends Component {
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
-
-            
-          
             <HomepageHeading />
           </Segment>
         </Visibility>
@@ -182,10 +183,8 @@ class MobileContainer extends Component {
             style={{ minHeight: 350, padding: '1em 0em' }}
             vertical
           >
-           
             <HomepageHeading mobile />
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>

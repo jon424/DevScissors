@@ -1,14 +1,18 @@
 import React, { Fragment, useState, useEffect } from "react";
-import axios from "axios";
+import Topic from './Topic';
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Route, Link } from "react-router-dom";
 import gifImg from "./api-hooks-example.gif";
 
-function Post() {
+function Post({ match }) {
+  console.log('match: ', match)
   const [card, setCards] = useState([]);
 
   async function getCards() {
-      const res = await fetch("http://localhost:5000/api/topics");
+    let topics = window.location.pathname;
+    console.log('location: ', window.location.pathname)
+    
+      const res = await fetch(`http://localhost:5000/api${topics}`);
 
       const topicArray = await res.json();
 
@@ -50,5 +54,7 @@ function Post() {
     </Fragment>
   );
 }
+
+
 
 export default Post;

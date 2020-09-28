@@ -44,7 +44,8 @@ componentDidUpdate(){
         <NavBar />
         <Switch>
          <Route exact path='/' component={HomepageLayout} />  
-         <Route exact path='/topic/:id' component={Topic} /> 
+         <Route exact path='/:topic' component={Topic} />  
+         {/* <Route exact path='/:topic' render={(props) => <Topic {...props}/>}/>  */}
          
      {/* NOT FOUND HANDLER */}
      {/* <Route component={NotFound} /> */}

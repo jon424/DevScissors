@@ -43,15 +43,17 @@ app.get('/api/topics', async (req, res) => {
 
 
 //select one topic
-app.get('/api/topics/:id', async (req, res) => {
+app.get('/api/:topic', async (req, res) => {
   try {
-    const { id } = req.params;
-    const topic = await pool.query(
-      "SELECT * FROM card WHERE id = $1", [
-      id
+    const { topic } = req.params;
+    const topicArray = await pool.query(
+      "SELECT * FROM card WHERE topic = $1", [
+      topic
     ]);
+    // console.log('topic', topicArray.rows[0])
+    console.log('topic', res.json(topicArray.rows))
 
-    res.json(topic.rows[0])
+    res.json(topicArray.rows[0])
   } catch (err) {
     console.error(err.message)
   }
