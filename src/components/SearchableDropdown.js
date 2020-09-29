@@ -48,8 +48,15 @@ class SearchableDropdown extends Component {
     );
     console.log("snipppetttz?!: ", snippets);
     if(!window.location.hash) {
-      window.location = window.location + '#loaded';
+      if(window.location.href.indexOf('#loaded') > 0) {
+        window.location = window.location + '#loadedAgain';
+        window.location.reload();
+      } else {
+      window.history.replaceState({}, "Title", '#loaded')
+      console.log('window location: ', window.location)
+      // window.location = window.location + '#loaded';
       window.location.reload();
+      }
     }
    
   
@@ -83,10 +90,24 @@ class SearchableDropdown extends Component {
     );
     console.log("snipppetttz?!: ", snippets);
     if(!window.location.hash) {
-      window.location = window.location + '#loaded';
+      if(window.location.href.indexOf('#loaded') > 0) {
+        window.location = window.location + '#loadedAgain';
+        window.location.reload();
+      } else {
+      window.history.replaceState({}, "Title", '#loaded')
+      console.log('window location: ', window.location)
+      // window.location = window.location + '#loaded';
       window.location.reload();
+      }
     }
   }
+  // if (window.location.href === 'http://localhost:3000/#loaded' || window.location.href === 'http://localhost:3000/' ) {
+  //   window.location = window.location + '#loadedAgain';
+  //   window.location.reload();
+  // } else if (window.location.href === 'http://localhost:3000/#loaded#loadedAgain') {
+  //   window.location.href = 'http://localhost:3000/#loadedMore'
+  //   window.location.reload()
+  // }
 }
 
 // componentDidUpdate (prevProps) {
