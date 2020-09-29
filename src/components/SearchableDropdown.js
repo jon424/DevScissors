@@ -48,17 +48,11 @@ class SearchableDropdown extends Component {
     );
     console.log("snipppetttz?!: ", snippets);
     if(!window.location.hash) {
-      if(window.location.href.indexOf('#loaded') > 0) {
-        window.location = window.location + '#loadedAgain';
-        window.location.reload();
-      } else {
       window.history.replaceState({}, "Title", '#loaded')
-      console.log('window location: ', window.location)
+      console.log('window location pathname: ', window.location.pathname)
       // window.location = window.location + '#loaded';
       window.location.reload();
-      }
-    }
-   
+      }    
   
   }
      else {
@@ -89,18 +83,36 @@ class SearchableDropdown extends Component {
       })
     );
     console.log("snipppetttz?!: ", snippets);
+    // if(!window.location.hash) {
+    //   if(window.location.href.indexOf('#loaded') > 0) {
+    //     window.location = window.location + '#loadedAgain';
+    //     window.location.reload();
+    //   } else {
+    //   window.history.replaceState({}, "Title", '#loaded')
+    //   console.log('window location pathname: ', window.location.pathname)
+    //   // window.location = window.location + '#loaded';
+    //   window.location.reload();
+    //   }
+    // }
     if(!window.location.hash) {
-      if(window.location.href.indexOf('#loaded') > 0) {
-        window.location = window.location + '#loadedAgain';
-        window.location.reload();
-      } else {
       window.history.replaceState({}, "Title", '#loaded')
-      console.log('window location: ', window.location)
+      console.log('window location pathname: ', window.location.pathname)
       // window.location = window.location + '#loaded';
       window.location.reload();
-      }
+      } 
+
+      //popstate event is triggered (back button)
+      window.onpopstate = function(event) {
+       // alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+        if (document.location.href === 'http://localhost:3000/#loaded'){
+          window.location.replace('http://localhost:3000');
+          window.location.reload();
+        }
+      };
     }
   }
+
+  
   // if (window.location.href === 'http://localhost:3000/#loaded' || window.location.href === 'http://localhost:3000/' ) {
   //   window.location = window.location + '#loadedAgain';
   //   window.location.reload();
@@ -108,14 +120,9 @@ class SearchableDropdown extends Component {
   //   window.location.href = 'http://localhost:3000/#loadedMore'
   //   window.location.reload()
   // }
-}
 
-// componentDidUpdate (prevProps) {
-//   if (prevProps.data !== this.props.data) {
-//     alert('not the same!')
-//       this.forceUpdate();
-//   }
-// }
+
+
 
   render() {
     let topic = this.props.topic;
