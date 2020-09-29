@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Topic from './Topic';
+import SearchableDropdown from './SearchableDropdown';
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Route, Link } from "react-router-dom";
 import gifImg from "./api-hooks-example.gif";
@@ -26,6 +27,8 @@ function Post({ match }) {
   }, []);
 
   console.log("card: ", card)
+
+//<div>{item.card_title} | {item.card_subtitle}</div>
 
   return (
     <Fragment>

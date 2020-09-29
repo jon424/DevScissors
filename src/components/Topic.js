@@ -29,10 +29,10 @@ class HomepageHeading extends Component {
   };
 
   componentDidMount() {
-      let URLPath = window.location.pathname;
+      let URLPath = window.location.pathname.toLowerCase();
       if (URLPath === '/html-css') {
           this.setState({
-              topic: 'HTML / CSS'
+              topic: 'HTML / CSS',
           })
       } else if (URLPath === '/react') {
           this.setState({
@@ -75,7 +75,7 @@ class HomepageHeading extends Component {
           This is a paragraph about the {this.state.topic} Snippets Collection.
           It is quite a paragraph, and it is quite a collection.
         </p>
-        <SearchableDropdown />
+        <SearchableDropdown topic={this.state.topic} name={this.state.name}/>
         <div className="metaPost">
           <Post />
         </div>
