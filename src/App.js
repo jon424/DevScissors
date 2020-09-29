@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import HomepageLayout from './components/HomepageLayout';
 import NavBar from './components/NavBar';
-import Topic from './components/Topic'
+import Topic from './components/Topic';
+import NotFound from './components/NotFound';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //import logo from './images/DevScissors Graphics.jpg';
 import $ from 'jquery';
@@ -45,10 +46,10 @@ componentDidUpdate(){
         <Switch>
          <Route exact path='/' component={HomepageLayout} />  
          <Route exact path='/:topic' component={Topic} />  
-         {/* <Route exact path='/:topic' render={(props) => <Topic {...props}/>}/>  */}
-         
-     {/* NOT FOUND HANDLER */}
-     {/* <Route component={NotFound} /> */}
+         <Route component={NotFound} />
+
+
+       
         </Switch>
         
       </Router>

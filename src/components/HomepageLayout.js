@@ -33,6 +33,9 @@ import {
 //   else require ('./styles.css')
 // }
 
+// const refreshPage = () => {
+//   window.parent.location = window.parent.location.href;
+// }
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -73,7 +76,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
  
-    <Link to='/html-css'><Button primary size='huge' style={{
+    <Link to='/html-css'  ><Button primary size='huge' style={{
         margin: '10px 10px 10px 10px', 
         backgroundColor: 'firebrick',
         boxShadow: '3px 5px #080808',
@@ -124,12 +127,21 @@ HomepageHeading.propTypes = {
 }
 
 class DesktopContainer extends Component {
+ 
+
   state = {}
+
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
+  refreshPage = () => {
+    window.parent.location = window.parent.location.href;
+  }
+
 
   render() {
+   
+   
     const { children } = this.props
     const { fixed } = this.state
 
@@ -162,6 +174,7 @@ DesktopContainer.propTypes = {
 
 class MobileContainer extends Component {
   state = {}
+
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
