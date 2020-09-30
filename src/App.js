@@ -3,7 +3,6 @@ import './App.css';
 import HomepageLayout from './components/HomepageLayout';
 import NavBar from './components/NavBar';
 import Topic from './components/Topic';
-import ContactUs from './components/ContactUs';
 import NotFound from './components/NotFound';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -47,7 +46,6 @@ componentDidUpdate(){
          <Route exact path='/' component={HomepageLayout} />  
          <Route path='/:topic' component={Topic} />  
          <Route path='*' component={NotFound} />
-         <Route path='/email' component={ContactUs} />
         </Switch>
       </Router>
     </div>

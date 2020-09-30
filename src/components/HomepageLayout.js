@@ -339,7 +339,7 @@ const HomepageLayout = () => (
                 DevSc✂ssors
               </Header>
               <p>
-                Site developed and maintained by Jon Jackson. 
+                DevScissors was developed and is maintained by Jon Jackson. 
               </p>
             </Grid.Column>
           </Grid.Row>
