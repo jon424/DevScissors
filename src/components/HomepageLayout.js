@@ -7,7 +7,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import SearchableDropdown from './SearchableDropdown';
 import './styles.css'
-import logo from '../images/DevScissors Graphics.jpg';
+// import logo from '../images/DevScissors Graphics.jpg';
 import React, { Component } from 'react';
 import Post from './Post'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
@@ -245,7 +245,7 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image src={logo} />
+            <Image />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

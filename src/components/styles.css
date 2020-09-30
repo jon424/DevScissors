@@ -60,7 +60,12 @@ max-width: none!important;
     background-color:#1b1c1d;
 } 
 
-
+.no-snips {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    display: block;
+    margin: auto;
+}
 
 @media only screen and (max-width: 769px){ 
   .pusher .ui.inverted.vertical.center.aligned.segment{

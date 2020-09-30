@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Dropdown } from "semantic-ui-react";
 
 
-
-
 const snippets = [];
 
 class SearchableDropdown extends Component {
@@ -50,7 +48,6 @@ class SearchableDropdown extends Component {
     if(!window.location.hash) {
       window.history.replaceState({}, "Title", '#loaded')
       console.log('window location pathname: ', window.location.pathname)
-      // window.location = window.location + '#loaded';
       window.location.reload();
       }    
   
@@ -83,27 +80,14 @@ class SearchableDropdown extends Component {
       })
     );
     console.log("snipppetttz?!: ", snippets);
-    // if(!window.location.hash) {
-    //   if(window.location.href.indexOf('#loaded') > 0) {
-    //     window.location = window.location + '#loadedAgain';
-    //     window.location.reload();
-    //   } else {
-    //   window.history.replaceState({}, "Title", '#loaded')
-    //   console.log('window location pathname: ', window.location.pathname)
-    //   // window.location = window.location + '#loaded';
-    //   window.location.reload();
-    //   }
-    // }
     if(!window.location.hash) {
       window.history.replaceState({}, "Title", '#loaded')
       console.log('window location pathname: ', window.location.pathname)
-      // window.location = window.location + '#loaded';
       window.location.reload();
       } 
 
       //popstate event is triggered (back button)
       window.onpopstate = function(event) {
-       // alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
         if (document.location.href === 'http://localhost:3000/#loaded'){
           window.location.replace('http://localhost:3000');
           window.location.reload();
@@ -111,18 +95,6 @@ class SearchableDropdown extends Component {
       };
     }
   }
-
-  
-  // if (window.location.href === 'http://localhost:3000/#loaded' || window.location.href === 'http://localhost:3000/' ) {
-  //   window.location = window.location + '#loadedAgain';
-  //   window.location.reload();
-  // } else if (window.location.href === 'http://localhost:3000/#loaded#loadedAgain') {
-  //   window.location.href = 'http://localhost:3000/#loadedMore'
-  //   window.location.reload()
-  // }
-
-
-
 
   render() {
     let topic = this.props.topic;

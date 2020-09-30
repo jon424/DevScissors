@@ -5,7 +5,7 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import SearchableDropdown from "./SearchableDropdown";
 import "./styles.css";
-import logo from "../images/DevScissors Graphics.jpg";
+// import logo from "../images/DevScissors Graphics.jpg";
 
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
@@ -30,23 +30,23 @@ class HomepageHeading extends Component {
 
   componentDidMount() {
       let URLPath = window.location.pathname.toLowerCase();
-      if (URLPath === '/html-css') {
+      if (URLPath === '/topic/html-css') {
           this.setState({
               topic: 'HTML / CSS',
           })
-      } else if (URLPath === '/react') {
+      } else if (URLPath === '/topic/react') {
           this.setState({
               topic: 'React'
           })
-      } else if (URLPath === '/javascript') {
+      } else if (URLPath === '/topic/javascript') {
           this.setState({
               topic: 'JavaScript'
           })
-      } else if (URLPath === '/jquery') {
+      } else if (URLPath === '/topic/jquery') {
           this.setState({
               topic: 'jQuery'
           })
-      } else if (URLPath === '/postgresql') {
+      } else if (URLPath === '/topic/postgresql') {
           this.setState({
               topic: 'PostgreSQL'
           })
@@ -77,7 +77,7 @@ class HomepageHeading extends Component {
         </p>
         <SearchableDropdown topic={this.state.topic} name={this.state.name}/>
         <div className="metaPost">
-          <Post />
+          <Post topic={this.state.topic} />
         </div>
       </Container>
     );
