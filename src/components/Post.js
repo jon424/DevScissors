@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Topic from "./Topic";
 import SearchableDropdown from "./SearchableDropdown";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, Button } from "semantic-ui-react";
 import { Route, Link } from "react-router-dom";
 import gifImg from "./api-hooks-example.gif";
 
@@ -57,7 +57,22 @@ function Post({ match, props }) {
   } else if (card.length <= 0) {
     return (
       <div className="no-snips">
-        Looks like we don't have any snippets for this topic ... yet!
+        <div>Looks like we don't have any snippets for this topic ... yet!</div>
+        <div>
+          <Button
+            onClick={() => (window.location.pathname = "/")}
+            primary
+            size="huge"
+            style={{
+              margin: "10px 10px 10px 10px",
+              backgroundColor: "green",
+              boxShadow: "3px 5px #080808",
+            }}
+          >
+            Home
+            <Icon name="right arrow" />
+          </Button>
+        </div>
       </div>
     );
   }
