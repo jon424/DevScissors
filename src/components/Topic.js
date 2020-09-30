@@ -30,23 +30,23 @@ class HomepageHeading extends Component {
 
   componentDidMount() {
       let URLPath = window.location.pathname.toLowerCase();
-      if (URLPath === '/topic/html-css') {
+      if (URLPath === '/html-css') {
           this.setState({
               topic: 'HTML / CSS',
           })
-      } else if (URLPath === '/topic/react') {
+      } else if (URLPath === '/react') {
           this.setState({
               topic: 'React'
           })
-      } else if (URLPath === '/topic/javascript') {
+      } else if (URLPath === '/javascript') {
           this.setState({
               topic: 'JavaScript'
           })
-      } else if (URLPath === '/topic/jquery') {
+      } else if (URLPath === '/jquery') {
           this.setState({
               topic: 'jQuery'
           })
-      } else if (URLPath === '/topic/postgresql') {
+      } else if (URLPath === '/postgresql') {
           this.setState({
               topic: 'PostgreSQL'
           })

@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Topic from './components/Topic';
 import NotFound from './components/NotFound';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import $ from 'jquery';
 
 class App extends Component {
