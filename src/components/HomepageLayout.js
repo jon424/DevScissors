@@ -12,6 +12,7 @@ import React, { Component } from 'react';
 import Post from './Post'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Topic from './Topic';
+import Logo from '../components/DevScissors_logo.jpg';
 import {
   Button,
   Container,
@@ -227,7 +228,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    {/* <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
@@ -254,9 +255,9 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
 
-    <Segment style={{ padding: '0em' }} vertical>
+    {/* <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
@@ -276,18 +277,18 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Centered, Attention-Grabbing
+        <Header id="about" as='h3' style={{ fontSize: '2em' }}>
+          Code Snippets For You!
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum
+          DevScissors is a website devoted to providing code snippets that represent common patterns in software/web development. Choose a language/framework above and see what is available. Created and maintained by Jon Jackson. 
         </p>
-        <Button as='a' size='large'>
-          Read More
+        <Button onClick={() => {window.location.href = 'https://github.com/jon424'}} as='a' size='large'>
+          Follow Jon on GitHub!
         </Button>
 
         <Divider
@@ -300,14 +301,14 @@ const HomepageLayout = () => (
         </Divider>
 
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Is this really another header??
+          Do you have some code snippets that you would like to submit?
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Yes, it is. And this is another paragraph that can go on and on and on Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+          If you have some snippets written in clear, easy-to-follow README format, contact Jon to post them on DevScissors.
         </p>
-        <Button as='a' size='large'>
-          I'm Still Quite Interested
-        </Button>
+        <a href="mailto:jonathanjackson424@gmail.com"><Button as='a' size='large'>
+          Email Jon!
+        </Button></a>
       </Container>
     </Segment>
 
@@ -316,29 +317,29 @@ const HomepageLayout = () => (
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
+              <Image as='a' href='/' src={Logo} />
+              {/* <Header inverted as='h4' content='About' /> */}
+              {/* <List link inverted>
                 <List.Item as='a'>Sitemap</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
                 <List.Item as='a'>Something</List.Item>
                 <List.Item as='a'>Something Else</List.Item>
-              </List>
+              </List> */}
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
+              {/* <Header inverted as='h4' content='Services' /> */}
               <List link inverted>
-                <List.Item as='a'>Pre-Order</List.Item>
-                <List.Item as='a'>FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorites</List.Item>
+                <List.Item as='a' href='/#about'>About</List.Item>
+                <List.Item as='a' href='mailto:jonathanjackson424@gmail.com'>Contact</List.Item>
+                <List.Item as='a' href='https://github.com/jon424'>GitHub Profile</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Footer Header
+                DevSc✂ssors
               </Header>
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
+                Site developed and maintained by Jon Jackson. 
               </p>
             </Grid.Column>
           </Grid.Row>

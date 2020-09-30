@@ -67,20 +67,20 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
-                                <Menu.Item as='a' active>
+                                <Menu.Item as='a' href='/'>
                                     Home
                 </Menu.Item>
-                                <Menu.Item as='a'>Work</Menu.Item>
-                                <Menu.Item as='a'>Company</Menu.Item>
-                                <Menu.Item as='a'>Careers</Menu.Item>
-                                <Menu.Item position='right'>
+                <Menu.Item as='a' href='/#about'>About</Menu.Item>
+                                <Menu.Item as='a' href='mailto:jonathanjackson424@gmail.com'>Contact</Menu.Item>
+                                <Menu.Item as='a' href='https://github.com/jon424'>GitHub Profile</Menu.Item>
+                                {/* <Menu.Item position='right'>
                                     <Button as='a' inverted={!fixed}>
                                         Log in
                   </Button>
                                     <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                                         Sign Up
                   </Button>
-                                </Menu.Item>
+                                </Menu.Item> */}
                             </Container>
                         </Menu>
 
@@ -134,14 +134,14 @@ class MobileContainer extends Component {
 
 
                     >
-                        <Menu.Item as='a' active role='navbar'>
+                        <Menu.Item as='a' href='/' role='navbar'>
                             Home
             </Menu.Item>
-                        <Menu.Item as='a'>Work</Menu.Item>
-                        <Menu.Item as='a'>Company</Menu.Item>
-                        <Menu.Item as='a'>Careers</Menu.Item>
-                        <Menu.Item as='a'>Log in</Menu.Item>
-                        <Menu.Item as='a'>Sign Up</Menu.Item>
+                        <Menu.Item as='a' href='/#about'>About</Menu.Item>
+                        <Menu.Item as='a' href='mailto:jonathanjackson424@gmail.com'>Contact</Menu.Item>
+                        <Menu.Item as='a' href='https://github.com/jon424'>GitHub Profile</Menu.Item>
+                        {/* <Menu.Item as='a'>Log in</Menu.Item>
+                        <Menu.Item as='a'>Sign Up</Menu.Item> */}
                     </Sidebar>
 
                     <Sidebar.Pusher dimmed={sidebarOpened} >
