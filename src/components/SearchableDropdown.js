@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import { Dropdown } from "semantic-ui-react";
-
+import { Dropdown, Form, FormButton } from "semantic-ui-react";
 
 const snippets = [];
 
 class SearchableDropdown extends Component {
   state = {
+    success: false,
     textValue: "",
     topic: this.props.topic,
     data: [],
   };
 
-  handleChange = (e, data) => {
-//
+  handleChange = (event, data) => {
   };
+
+  handleSubmit = (e) => { 
+    e.preventDefault();
+    this.setState({ sucess: true })
+  }
 
   async componentDidMount() {
     let topics = window.location.pathname;
@@ -100,6 +104,7 @@ class SearchableDropdown extends Component {
     let topic = this.props.topic;
     console.log("topic in Searchable: ", topic);
     return (
+      <Form onSubmit={this.handleSubmit}>
       <Dropdown
         placeholder="Search Snippets"
         fluid
@@ -116,6 +121,9 @@ class SearchableDropdown extends Component {
           marginTop: "30px",
         }}
       />
+       <FormButton type="submit">button</FormButton>
+      </Form>
+     
     );
   }
 }
